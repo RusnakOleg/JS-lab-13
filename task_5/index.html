@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Events</title>
+</head>
+<body>
+
+<button id="myButton">Live button!</button>
+<div id="message"></div>
+
+<script>
+const button = document.getElementById('myButton');
+const messageDiv = document.getElementById('message');
+
+button.addEventListener('click', () => {
+    messageDiv.textContent = "I was pressed!";
+});
+
+button.addEventListener('mouseover', () => {
+    messageDiv.textContent = "Mouse on me!";
+});
+
+button.addEventListener('mouseout', () => {
+    messageDiv.textContent = "Mouse is not on me!";
+});
+</script>
+
+</body>
+</html>
