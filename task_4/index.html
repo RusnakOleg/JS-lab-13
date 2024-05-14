@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Options</title>
+</head>
+<body>
+
+<select id="dropdown">
+    <option value="1">Peter</option>
+    <option value="2">Logan</option>
+    <option value="3">Mike</option>
+    <option value="4">Loran</option>
+    <option value="5">Max</option>
+</select>
+
+<button id="deleteBtn">Видалити обраний елемент</button>
+
+<script>
+document.getElementById('deleteBtn').addEventListener('click', function() {
+    var dropdown = document.getElementById('dropdown');
+    var selectedOption = dropdown.options[dropdown.selectedIndex];
+    dropdown.removeChild(selectedOption);
+});
+</script>
+
+</body>
+</html>
