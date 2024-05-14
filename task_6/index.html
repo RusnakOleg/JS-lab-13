@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Window Resize Tracking</title>
+<style>
+    #dimensions {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="dimensions"></div>
+
+<script>
+const dimensionsDiv = document.getElementById('dimensions');
+
+function displayWindowSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    dimensionsDiv.textContent = `Width: ${width}px, Height: ${height}px`;
+}
+
+displayWindowSize();
+
+window.addEventListener('resize', displayWindowSize);
+</script>
+
+</body>
+</html>
