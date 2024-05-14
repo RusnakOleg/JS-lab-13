@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button and Link Events</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white; 
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<button id="btn1">Змінити на синій</button>
+<button id="btn2">Змінити на рожевий</button>
+<button id="btn3">Змінити на коричневий</button>
+<a href="#" id="link">Наведіть, щоб змінити фон на жовтий</a>
+
+<script>
+document.getElementById('btn1').addEventListener('click', function() {
+    document.body.style.backgroundColor = 'blue';
+});
+
+document.getElementById('btn2').addEventListener('dblclick', function() {
+    document.body.style.backgroundColor = 'pink';
+});
+
+document.getElementById('btn3').addEventListener('mousedown', function() {
+    document.body.style.backgroundColor = 'brown';
+});
+document.getElementById('btn3').addEventListener('mouseup', function() {
+    document.body.style.backgroundColor = 'white';
+});
+
+document.getElementById('link').addEventListener('mouseover', function() {
+    document.body.style.backgroundColor = 'yellow';
+});
+document.getElementById('link').addEventListener('mouseout', function() {
+    document.body.style.backgroundColor = 'white';
+});
+</script>
+
+</body>
+</html>
